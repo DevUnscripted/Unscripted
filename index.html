@@ -1,0 +1,187 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Canvas Unscripted</title>
+  <meta name="description" content="Canvas Unscripted - Bold, artistic, streetwear-inspired customized apparel and designs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-container">
+    <a href="#hero" class="logo">Canvas<span class="logo-alt">Unscripted</span></a>
+    <nav class="nav" id="nav-menu">
+      <ul class="nav-list">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#gallery" class="nav-link">Designs</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section id="hero" class="hero">
+    <div class="container hero-container">
+      <h1 class="hero-title">Be Bold. Be Unscripted.</h1>
+      <p class="hero-subtitle">Custom streetwear designs that speak your truth.</p>
+      <a href="#gallery" class="btn btn-primary">Explore Designs</a>
+    </div>
+  </section>
+
+  <section id="about" class="about section-padding">
+    <div class="container about-container">
+      <div class="about-text">
+        <h2>About Canvas Unscripted</h2>
+        <p>Canvas Unscripted is a multi-niche brand centered around bold, artistic, and streetwear-inspired apparel and design. We believe in breaking conventions and letting your style be your statement.</p>
+        <p>From custom t-shirts to unique accessories, each piece is crafted to help you stand out and express your true self.</p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=600&q=80" alt="Artistic streetwear design" />
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery section-padding">
+    <div class="container">
+      <h2 class="section-title">Featured Designs</h2>
+      <div class="grid-gallery">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=400&q=80" alt="Abstract black and white t-shirt" />
+          <h3>Monochrome Abstract</h3>
+          <p>Minimalist black and white design with bold contrast.</p>
+          <button class="btn btn-secondary" disabled>View More</button>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Streetwear hoodie design" />
+          <h3>Urban Vibes Hoodie</h3>
+          <p>Comfort meets style with this bold urban graphic.</p>
+          <button class="btn btn-secondary" disabled>View More</button>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1520975861804-244f4fddb2f0?auto=format&fit=crop&w=400&q=80" alt="Graphic print snapback hat" />
+          <h3>Snapback Statement</h3>
+          <p>Top off your look with a statement snapback hat.</p>
+          <button class="btn btn-secondary" disabled>View More</button>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1465188035480-9b72f3b99e87?auto=format&fit=crop&w=400&q=80" alt="Graphic tee with bold design" />
+          <h3>Bold Statement Tee</h3>
+          <p>Make an impact with vivid colors and striking prints.</p>
+          <button class="btn btn-secondary" disabled>View More</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact section-padding">
+    <div class="container contact-container">
+      <h2 class="section-title">Get In Touch</h2>
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name" />
+          <span class="error-msg" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required aria-required="true" placeholder="you@example.com" />
+          <span class="error-msg" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your message..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-feedback" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-container">
+    <p>© 2025 Canvas Unscripted. All rights reserved.</p>
+    <div class="social-icons" role="list">
+      <a href="#" aria-label="Instagram" class="social-link">📸</a>
+      <a href="#" aria-label="Twitter" class="social-link">🐦</a>
+      <a href="#" aria-label="Facebook" class="social-link">📘</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js">
+
+    // script.js
+
+// Mobile menu toggle
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+// Smooth scroll for nav links
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    navMenu.classList.remove('active');
+    const targetId = link.getAttribute('href').slice(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// Form validation and feedback
+const form = document.getElementById('contact-form');
+const feedback = form.querySelector('.form-feedback');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  let valid = true;
+
+  // Clear previous errors
+  form.querySelectorAll('.error-msg').forEach(span => (span.textContent = ''));
+
+  // Name validation
+  const nameInput = form.name;
+  if (!nameInput.value.trim()) {
+    valid = false;
+    nameInput.nextElementSibling.textContent = 'Name is required.';
+  }
+
+  // Email validation (basic)
+  const emailInput = form.email;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailInput.value.trim()) {
+    valid = false;
+    emailInput.nextElementSibling.textContent = 'Email is required.';
+  } else if (!emailPattern.test(emailInput.value.trim())) {
+    valid = false;
+    emailInput.nextElementSibling.textContent = 'Enter a valid email.';
+  }
+
+  if (valid) {
+    feedback.textContent = 'Thank you for reaching out! We will get back to you soon.';
+    form.reset();
+  } else {
+    feedback.textContent = '';
+  }
+});
+</script>
+</body>
+</html>
